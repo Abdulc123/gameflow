@@ -1,22 +1,16 @@
-import GameCard from "./components/GameCard";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Lobby from "./pages/Lobby";
+import Poker from "./pages/Poker";
+import Mafia from "./pages/Mafia";
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <GameCard
-        title="Poker"
-        description="Create or join a Poker lobby with friends."
-        imageSource="../public/images/games/poker_icon.webp"
-        onClick={() => console.log("Poker Selected")}
-      />
-      <GameCard
-        title="Mafia"
-        description="Create or join a Mafia lobby with friends."
-        imageSource="../public/images/games/mafia_icon.webp"
-        onClick={() => console.log("Mafia Selected")}
-      />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/lobby" element={<Lobby />} />
+      <Route path="/poker" element={<Poker />} />
+      <Route path="/mafia" element={<Mafia />} />
+    </Routes>
   );
 }
-
-export default App;

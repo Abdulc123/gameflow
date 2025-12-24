@@ -1,5 +1,4 @@
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 
 interface GameCardProps {
   title: string;
@@ -10,14 +9,16 @@ interface GameCardProps {
 
 function GameCard({ title, description, imageSource, onClick }: GameCardProps) {
   return (
-    <Card border="dark" style={{ width: "18rem" }}>
+    <Card
+      border="dark"
+      style={{ width: "18rem", cursor: "pointer" }}
+      className="game-card shadow-p m-2"
+      onClick={onClick}
+    >
       <Card.Img variant="top" src={imageSource} alt={title} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{description}</Card.Text>
-        <Button variant="light" onClick={onClick}>
-          Select
-        </Button>
       </Card.Body>
     </Card>
   );

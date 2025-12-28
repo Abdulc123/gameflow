@@ -10,13 +10,17 @@ export default function Home() {
         <GameCard
           title="Poker"
           description="Create or join a Poker lobby with friends."
-          imageSource={`/images/posters/${GameType.Poker}_poster.webp`}
+          imageSource={`${import.meta.env.BASE_URL}images/posters/${
+            GameType.Poker
+          }_poster.webp`}
           onClick={() => navigate(`/lobby?game=${GameType.Poker}`)}
         />
         <GameCard
           title="Mafia"
           description="Create or join a Mafia lobby with friends."
-          imageSource={`/images/posters/${GameType.Mafia}_poster.webp`}
+          imageSource={`${import.meta.env.BASE_URL}images/posters/${
+            GameType.Mafia
+          }_poster.webp`}
           onClick={() => navigate(`/lobby?game=${GameType.Mafia}`)}
         />
       </div>

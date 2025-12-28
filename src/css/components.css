@@ -1,3 +1,9 @@
+.game-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
 .game-card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }

@@ -53,7 +53,7 @@ export default function Lobby() {
   }
 
   return (
-    <div className="min-vh-100 d-flex justify-content-center align-items-start pt-5">
+    <div className="min-vh-100 d-flex justify-content-center align-items-start pt-5 px-2">
       <Card className="w-100" style={{ maxWidth: 800 }} border="dark">
         <Card.Header>
           <div className="d-flex justify-content-between align-items-center">
